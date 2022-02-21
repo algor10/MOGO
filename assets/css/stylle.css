@@ -239,10 +239,15 @@ hr{
 }
 
 .section--devices{
+    margin-bottom: 40px;
     padding-bottom: 0;
     background: url(../img/devices/background_devices.jpg) center no-repeat;
     background-size: cover;
 
+}
+
+.section--gray{
+    background-color: #f8f8f8;
 }
 
 .section__header{
@@ -279,6 +284,7 @@ hr{
 .section__text{
     font-size: 15px;
     color: #999;
+    text-align: center;
 
 }
 
@@ -431,4 +437,133 @@ hr{
     bottom: -70px;
     right: 0;
     z-index: 1;
+}
+
+/* We do */
+
+.wedo{
+    display: flex;
+}
+
+.wedo__item{
+    width: 50%;
+}
+
+/* Accordeon */
+
+.accordeon__item{
+    border: 1px solid #e5e5e5;
+    margin-top: 10px;
+}   
+
+.accordeon__item.active .accordeon__header{
+    border-bottom-color: #e5e5e5; 
+}
+
+.accordeon__item.active .accordeon__content{
+    display: block;
+}
+
+.accordeon__item.active .accordeon__header{
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.accordeon__item.active .accordeon__header::after{
+    transform: translateY(-50%) rotate(-45deg);
+    margin-top: 5px;
+}
+
+.accordeon__header{
+    padding: 15px 20px 15px 65px;
+    border-bottom: 1px solid  transparent;
+    position: relative; 
+
+    cursor: pointer;
+}
+
+.accordeon__header::after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.accoreon__icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%); 
+}
+
+.accordeon__content{
+    padding: 15px 20px;
+    display: none;
+
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.accordeon__title{
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+
+/* Reviews */
+
+.reviews{
+    padding: 0 110px;
+}
+
+.reviews__item{
+    padding-left: 205px;
+    position: relative;
+}
+
+.reviews__photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__text{
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999;
+    
+}
+
+.reviews__autor{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+}
+
+.reviews__autor::before{
+    content: "";
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
+    height: 3px;
+    margin-right: 10px;
+    background-color: #f38181;
 }
